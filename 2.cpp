@@ -41,5 +41,5 @@ int main()
         cin>>str[i];
     }
 
-    cout<<"longest valid parenthesis is of size : "<<longest_valid_parenthesis(str,size)<<endl;
+    cout<<"longest valid parenthesis is of size : "<<longest_valid_parenthesis(str,size);
 }
