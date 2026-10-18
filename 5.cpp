@@ -1,7 +1,6 @@
 #include<iostream>
 using namespace std ;
-class node
-{
+class node{
     public:
     int data;
     node *next=NULL;
@@ -14,37 +13,30 @@ class node
 
 node*head=NULL;
 
-void insertathead(int value)
-{
+void insertathead(int value){
     node* ptr=new node(value);
-    if(head==NULL)
-    {
+    if(head==NULL){
         head=ptr;
     }
-    else
-    {
+    else{
         ptr->next=head;
         head=ptr;
     }
 }
 
-void printlist(node* head)
-{
+void printlist(node* head){
     node* temp=head;
-    while(temp!=NULL)
-    {
+    while(temp!=NULL){
         cout<<temp->data<<" ";
         temp=temp->next;
     }
 }
 
-node* reverselist(node* head)
-{
+node* reverselist(node* head){
     node*prev=NULL;
     node*curr=head;
     
-    while(curr!=NULL)
-    {
+    while(curr!=NULL){
        node*next=curr->next;
        curr->next=prev;
        prev=curr;
@@ -53,14 +45,12 @@ node* reverselist(node* head)
     return prev;
 }
 
-int main()
-{
+int main(){
     int choice;
     cout<<"enter how many nodes u want to enter"<<endl;
     cin>>choice;
     cout<<"enter values"<<endl;
-    for(int i=0;i<choice;i++)
-    {
+    for(int i=0;i<choice;i++){
         int value;
         cin>>value;
         insertathead(value);
