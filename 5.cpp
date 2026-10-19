@@ -32,9 +32,9 @@ void printlist(node* head){
     }
 }
 
-node* reverselist(node* head){
+node* reverselist(node* h){
     node*prev=NULL;
-    node*curr=head;
+    node*curr=h;
     
     while(curr!=NULL){
        node*next=curr->next;
@@ -42,7 +42,7 @@ node* reverselist(node* head){
        prev=curr;
        curr=next;
     }
-    return prev;
+    head = prev;
 }
 
 int main(){
@@ -59,7 +59,7 @@ int main(){
     cout<<"nodes before reversing :";
     printlist(head);
 
-    head=reverselist(head);
+    reverselist(head);
     cout<<endl;
 
     cout<<"nodes after reversing"<<endl;
