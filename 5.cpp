@@ -32,9 +32,9 @@ void printlist(node* head){
     }
 }
 
-node* reverselist(node* h){
+node* reverselist(node* temp){
     node*prev=NULL;
-    node*curr=h;
+    node*curr=temp;
     
     while(curr!=NULL){
        node*next=curr->next;
